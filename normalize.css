@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    width: fit-content;
+}
+
+html {
+    height: -webkit-fill-available;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-white);
+}
+
+h1,
+h2,
+p,
+strong,
+a {
+    font-family: 'Inter', sans-serif;
+}
