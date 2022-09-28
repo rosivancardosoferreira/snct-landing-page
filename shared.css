@@ -70,6 +70,13 @@
     font-weight: 400;
 }
 
+.effect__parallax {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 @media screen and (max-width: 767px) {
     .safe__area {
         padding-left: 20px;

@@ -1,0 +1,90 @@
+.banner {
+    margin: auto;
+    background-image: url("/src/assets/banner.webp");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.banner__safe {
+    width: 100%;
+}
+
+.banner__institutions {
+    grid-column: 1/13;
+    margin-bottom: 20vh;
+}
+
+.institutions__text {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--primary-white);
+    font-weight: 800;
+    text-align: center;
+}
+
+.banner__texts  {
+    grid-column: 1/8;
+}
+
+.banner__title {
+    font-size: 2.7rem;
+    line-height: 3rem;
+    letter-spacing: 1px;
+    color: var(--primary-white);
+    font-weight: 900;
+}
+
+.banner__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.1px;
+    color: var(--yellow);
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.banner__dates {
+    grid-column: 8/13;
+    border-left: 2px solid var(--primary-white);
+    padding: 0 30px;
+}
+
+.banner__date {
+    font-size: 1.6rem;
+    letter-spacing: 1.3px;
+    color: var(--primary-white);
+    font-weight: 900;
+}
+
+.banner__locale {
+    display: flex;
+    margin-top: 16px;
+    column-gap: 10px;
+}
+
+.banner__address {
+    font-size: 1rem;
+    letter-spacing: 1.1px;
+    color: var(--primary-white);
+}
+
+@media screen and (max-width: 767px) {
+    .banner__safe {
+        display: flex;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner__safe {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding-left: 72px;
+        padding-right: 72px;
+        column-gap: 32px;
+        max-width: 1360px;
+        margin: auto;
+    }
+}
