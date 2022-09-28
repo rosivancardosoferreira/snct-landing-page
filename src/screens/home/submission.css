@@ -1,0 +1,18 @@
+.submission__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin: 25px;
+}
+
+.submission__text {
+    font-size: var(--normal);
+    line-height: var(--normal);
+    color: var(--secondary-dark);
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.submission__button {
+    margin: 25px auto 0;
+}

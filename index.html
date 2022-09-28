@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="src/screens/home/header.css">
     <link rel="stylesheet" href="src/screens/home/banner.css">
+    <link rel="stylesheet" href="src/screens/home/submission.css">
+    <link rel="stylesheet" href="src/screens/home/realization.css">
+    <link rel="stylesheet" href="src/screens/home/footer.css">
     <link rel="stylesheet" href="style.css">
     <title>SNCT - ICET - 2022</title>
 </head>
 <body>
-    <header class="header box__shadow">
+    <header class="header box__shadow header--hidden" id="header">
         <div class="header__content safe__area">
             <img
                 src="/src/assets/logosnct2022.png"
@@ -25,15 +28,14 @@
                 <ul class="header__items">
                     <li>
                         <a href="#inicio" class="header__link">Início</a>
+                    </li>                    <li>
+                        <a href="#sobre" class="header__link">Sobre</a>
                     </li>
                     <li>
-                        <a href="#" class="header__link">Sobre</a>
+                        <a href="#programacao" class="header__link">Programação</a>
                     </li>
                     <li>
-                        <a href="#datas-importantes" class="header__link">Programação</a>
-                    </li>
-                    <li>
-                        <a href="#" class="header__link">Edições</a>
+                        <a href="#edicoes-anteriores" class="header__link">Edições</a>
                     </li>
                     <li>
                         <a href="#" class="header__link">Realização</a>
@@ -49,7 +51,7 @@
         </div>
     </header>
     <main>
-        <section class="banner effect__parallax">
+        <section class="banner effect__parallax" id="inicio">
             <div class="banner__safe">
                 <div class="banner__institutions">
                     <h3 class="institutions__text">
@@ -84,10 +86,18 @@
                             Rua Nossa Senhora do Rosário, 3863 – Tiradentes Itacoatiara – Amazonas
                         </p>
                     </div>
+                    <a
+                        href="https://www.even3.com.br/xvsnctita2021/"
+                        target="_blank"
+                        class="button__default bannert__button"
+                    >
+                        QUERO GARANTIR MINHA VAGA
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="about safe__area section--top" id="inicio">
+        <span id="sobre"></span>
+        <section class="about safe__area section--top">
             <div class="title__contant">
                 <hr class="title__line" />
                 <h2 class="title__text">Sobre o Evento</h2>
@@ -104,14 +114,62 @@
                 <br /><br />
             </p>
         </section>
-        <section class="event safe__area section--top" id="evento-satelite">
+        <section class="submission safe__area section--top">
+            <div class="title__contant">
+                <hr class="title__line" />
+                <h2 class="title__text">Submissão de Atividades</h2>
+                <hr class="title__line" />
+            </div>
+            <p class="simple__text">
+                Participe da XVI SNCT-2022 submetendo uma atividade como:
+            </p>
+            <ul class="submission">
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Palestras: De 50 minutos</p>
+                </li>
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Minicursos: De 4 horas, sendo 2 horas por dia</p>
+                </li>
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Oficinas: De 4 horas, sendo 2 horas por dia</p>
+                </li>
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Trabalhos de Conclusão de Curso: De 20 minutos</p>
+                </li>
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Projetos de Iniciação Científica: De 20 minutos</p>
+                </li>
+                <li class="submission__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <p class="submission__text">Projetos de Extensão: De 20 minutos</p>
+                </li>
+            </ul>
+            <p class="simple__text">
+                <strong>
+                    Informamos que esta submissão de atividade não configura aceitação imediata da proposta, pois temos um quantitativo a ser aceito. Caso tenham dúvidas, não hesitem em entrar em contato.
+                </strong>
+            </p>
+            <a
+                href="https://sncticet.ufam.edu.br/formulario/"
+                target="_blank"
+                class="button__default submission__button"
+            >
+                SUBMISSÃO DE ATIVIDADES AQUI
+            </a>
+        </section>
+        <!-- <section class="event safe__area section--top" id="evento-satelite">
             <div class="title__contant">
                 <hr class="title__line" />
                 <h2 class="title__text">Evento Satélite</h2>
                 <hr class="title__line" />
             </div>
             <p class="simple__text">Em breve</p>
-        </section>
+        </section> -->
         <section class="dates safe__area section--top">
             <div class="title__contant">
                 <hr class="title__line" />
@@ -124,35 +182,35 @@
             </p>
             <ul class="dates__items">
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(25,188,155,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
                     <div class="dates__content">
                         <p class="dates__text">Período de Submissão (Autores)</p>
                         <p class="dates__info">22/09/2022 até 03/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(25,188,155,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
                     <div class="dates__content">
                         <p class="dates__text">Avaliação dos Trabalhos(Comitê)</p>
                         <p class="dates__info">04/10/2022 até 08/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(25,188,155,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
                     <div class="dates__content">
                         <p class="dates__text">Período para Correção e Submissão da Versão Final (Autores)</p>
                         <p class="dates__info">09/10/2022 até 12/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(25,188,155,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
                     <div class="dates__content">
                         <p class="dates__text">Revisão Final (Comitê)</p>
                         <p class="dates__info">13/10/2022 até 22/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(25,188,155,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
                     <div class="dates__content">
                         <p class="dates__text">Divulgação do Resultado Final</p>
                         <p class="dates__info">22/10/2021</p>
@@ -165,12 +223,12 @@
                     target="_blank"
                     class="button__default"
                 >
-                    Submissão de trabalhos aqui
+                    SUBMISSÃO DE RESUMO/ARTIGO AQUI
                 </a>
             </div>
-            
         </section>
-        <section class="schedule safe__area section--top" id="programacao">
+        <span id="programacao"></span>
+        <section class="schedule safe__area section--top">
             <div class="title__contant">
                 <hr class="title__line" />
                 <h2 class="title__text">Programação</h2>
@@ -178,7 +236,23 @@
             </div>
             <p class="simple__text">A inscrição no evento dá direito a você de participar das seguintes atividades: Palestras, Minicurso, Apresentações dos Artigos e Resumos. Para se inscrever nas atividades do evento clique no link abaixo:</p>
         </section>
-        <section class="full__editions section--top" id="edicoes-anteriores">
+        <section class="realization safe__area section--top">
+            <div class="title__contant">
+                <hr class="title__line" />
+                <h2 class="title__text">Realização</h2>
+                <hr class="title__line" />
+            </div>
+            <div class="realization__box">
+            </div>
+            <div class="realization__box">
+                <h4 class="realization__title">Apoio</h4>
+                <div class="realization__items">
+
+                </div>
+            </div>
+        </section>
+        <span id="edicoes-anteriores"></span>
+        <section class="full__editions section--top">
             <div class="safe__area">
                 <div class="title__contant">
                     <hr class="title__line title__line--invert" />
@@ -237,9 +311,13 @@
                     </a>
                 </nav>
             </div>
-
         </section>
-    </main>
-    
+    </main>    
+    <footer class="footer section--top">
+        <div class="safe__area">
+
+        </div>
+    </footer>
 </body>
+<script src="src/screens/home/script.js"></script>
 </html>

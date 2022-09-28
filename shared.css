@@ -4,7 +4,7 @@
 }
 
 .section--top {
-    margin-top: 90px;
+    margin-top: 110px;
 }
 
 .title__contant  {
@@ -67,7 +67,7 @@
     line-height: 1.7rem;
     color: var(--primary-white);
     background-color: var(--orange);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .effect__parallax {

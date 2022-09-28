@@ -1,10 +1,20 @@
 .header {
     background-color: var(--primary-white);
-    position: sticky;
+    position: fixed;
     top: 0;
-    padding: 10px 0;
     z-index: 1;
-    display: none;
+    transition: all 0.2s;
+    overflow: hidden;
+    width: 100%;
+}
+
+.header--hidden {
+    max-height: 0;
+}
+
+.header--show {
+    padding: 10px 0;
+    max-height: 100px;
 }
 
 .header__content {

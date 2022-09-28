@@ -29,8 +29,8 @@
 
 .banner__title {
     font-size: 2.7rem;
-    line-height: 3rem;
-    letter-spacing: 1px;
+    line-height: 3.5rem;
+    letter-spacing: 1.5px;
     color: var(--primary-white);
     font-weight: 900;
 }
@@ -67,6 +67,14 @@
     font-size: 1rem;
     letter-spacing: 1.1px;
     color: var(--primary-white);
+}
+
+.bannert__button {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--green);
 }
 
 @media screen and (max-width: 767px) {
