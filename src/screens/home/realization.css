@@ -1,7 +1,50 @@
-.realization {
-    border: 1px solid red;
+.realization {}
+
+.realization__institutions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.realization__logo {
+    max-width: 150px;
+    max-height: 140px;
 }
 
 .realization__box {
-    border: 1px solid blue;
+    margin-top: 30px;
+}
+
+.realization__title {
+    font-size: 1.5rem;
+    color: var(--secondary-dark);
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.realization__items {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-top: 20px;
+}
+
+.realization__item {
+    margin: auto;
+}
+
+.realization__support {
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
+
+.realization__name {
+    text-align: center;
+    margin-top: 15px;
+    font-size: var(--normal);
+    line-height: var(--normal);
+    color: var(--secondary-dark);
+    font-weight: 600;
 }
