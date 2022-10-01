@@ -1,7 +1,7 @@
 .banner {
     margin: auto;
     background-image: url("/src/assets/banner.webp");
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
 }
