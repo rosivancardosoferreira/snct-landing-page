@@ -26,6 +26,7 @@
 
 .realization__item {
     margin: auto;
+    height: 100%;
 }
 
 .realization__support {
@@ -36,12 +37,10 @@
 
 .realization__name {
     text-align: center;
-    margin-top: 15px;
-    font-size: var(--normal);
-    line-height: var(--normal);
     color: var(--secondary-dark);
     font-weight: 600;
 }
+
 
 @media screen and (max-width: 767px) {
     .realization__institutions {
@@ -58,10 +57,18 @@
         margin-top: 40px;
     }
 
+    
+
     .realization__items {
         grid-template-columns: repeat(3, auto);
         gap: 20px;
         margin-top: 30px;
+    }
+
+    .realization__name {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        line-height: 0.9rem;
     }
 
 }
@@ -76,5 +83,11 @@
         column-gap: 30px;
         row-gap: 40px;
         margin-top: 20px;
+    }
+
+    .realization__name {
+        margin-top: 15px;
+        font-size: var(--normal);
+        line-height: var(--normal);
     }
 }
