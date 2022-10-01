@@ -4,6 +4,7 @@
     height: 95vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .banner__safe {
@@ -11,7 +12,6 @@
 }
 
 .banner__institutions {
-    grid-column: 1/13;
     margin-bottom: 20vh;
 }
 
@@ -21,10 +21,6 @@
     color: var(--primary-white);
     font-weight: 800;
     text-align: center;
-}
-
-.banner__texts  {
-    grid-column: 1/8;
 }
 
 .banner__title {
@@ -42,12 +38,6 @@
     color: var(--yellow);
     font-weight: 500;
     margin-top: 25px;
-}
-
-.banner__dates {
-    grid-column: 8/13;
-    border-left: 2px solid var(--primary-white);
-    padding: 0 30px;
 }
 
 .banner__date {
@@ -77,15 +67,27 @@
     background-color: var(--green);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1039px) {
     .banner__safe {
         display: flex;
+        flex-direction: column;
+        height: fit-content;
         padding-left: 32px;
         padding-right: 32px;
+        row-gap: 10vh;
+    }
+
+    .banner__institutions {
+        display: none;
+    }
+
+    .banner__dates {
+        padding-top: 30px;
+        border-top: 2px solid var(--primary-white);
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1040px) {
     .banner__safe {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -94,5 +96,19 @@
         column-gap: 32px;
         max-width: 1360px;
         margin: auto;
+    }
+
+    .banner__institutions {
+        grid-column: 1/13;
+    }
+
+    .banner__texts  {
+        grid-column: 1/8;
+    }
+    
+    .banner__dates {
+        padding: 0 30px;
+        grid-column: 8/13;
+        border-left: 2px solid var(--primary-white);
     }
 }
