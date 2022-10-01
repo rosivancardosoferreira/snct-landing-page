@@ -1,5 +1,3 @@
-.realization {}
-
 .realization__institutions {
     display: flex;
     justify-content: space-around;
@@ -7,8 +5,7 @@
 }
 
 .realization__logo {
-    max-width: 150px;
-    max-height: 140px;
+    object-fit: contain;
 }
 
 .realization__box {
@@ -24,11 +21,7 @@
 
 .realization__items {
     display: grid;
-    grid-template-columns: repeat(5, auto);
     align-items: center;
-    column-gap: 30px;
-    row-gap: 40px;
-    margin-top: 20px;
 }
 
 .realization__item {
@@ -36,7 +29,8 @@
 }
 
 .realization__support {
-    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
     border: 1px solid #ccc;
 }
 
@@ -47,4 +41,40 @@
     line-height: var(--normal);
     color: var(--secondary-dark);
     font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .realization__institutions {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .realization__logo {
+        width: 200px;
+        height: 190px;
+    }
+
+    .realization__title {
+        margin-top: 40px;
+    }
+
+    .realization__items {
+        grid-template-columns: repeat(3, auto);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+}
+@media (min-width: 768px) {
+    .realization__logo {
+        width: 150px;
+        height: 140px;
+    }
+
+    .realization__items {
+        grid-template-columns: repeat(5, auto);
+        column-gap: 30px;
+        row-gap: 40px;
+        margin-top: 20px;
+    }
 }
