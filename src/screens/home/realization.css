@@ -1,5 +1,3 @@
-.realization {}
-
 .realization__institutions {
     display: flex;
     justify-content: space-around;
@@ -7,8 +5,7 @@
 }
 
 .realization__logo {
-    max-width: 150px;
-    max-height: 140px;
+    object-fit: contain;
 }
 
 .realization__box {
@@ -24,27 +21,73 @@
 
 .realization__items {
     display: grid;
-    grid-template-columns: repeat(5, auto);
     align-items: center;
-    column-gap: 30px;
-    row-gap: 40px;
-    margin-top: 20px;
 }
 
 .realization__item {
     margin: auto;
+    height: 100%;
 }
 
 .realization__support {
-    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
     border: 1px solid #ccc;
 }
 
 .realization__name {
     text-align: center;
-    margin-top: 15px;
-    font-size: var(--normal);
-    line-height: var(--normal);
     color: var(--secondary-dark);
     font-weight: 600;
+}
+
+
+@media screen and (max-width: 767px) {
+    .realization__institutions {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .realization__logo {
+        width: 200px;
+        height: 190px;
+    }
+
+    .realization__title {
+        margin-top: 40px;
+    }
+
+    
+
+    .realization__items {
+        grid-template-columns: repeat(3, auto);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .realization__name {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+
+}
+@media (min-width: 768px) {
+    .realization__logo {
+        width: 150px;
+        height: 140px;
+    }
+
+    .realization__items {
+        grid-template-columns: repeat(5, auto);
+        column-gap: 30px;
+        row-gap: 40px;
+        margin-top: 20px;
+    }
+
+    .realization__name {
+        margin-top: 15px;
+        font-size: var(--normal);
+        line-height: var(--normal);
+    }
 }

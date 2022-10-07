@@ -5,11 +5,18 @@
     margin: 25px;
 }
 
+.submission__icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
 .submission__text {
     font-size: var(--normal);
     line-height: var(--normal);
     color: var(--secondary-dark);
     font-weight: 500;
+    width: calc(100% - 25px);
     opacity: 0.9;
 }
 
