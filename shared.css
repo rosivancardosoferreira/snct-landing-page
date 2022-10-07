@@ -45,6 +45,7 @@
     line-height: 1.7rem;
     color: var(--secondary-dark);
     font-weight: 400;
+    text-align: justify;
 }
 
 .link__text {
