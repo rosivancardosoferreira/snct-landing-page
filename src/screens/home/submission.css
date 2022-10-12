@@ -6,7 +6,7 @@
 }
 
 .submission__icon {
-    width: 25px;
+    min-width: 25px;
     height: 25px;
     display: block;
 }

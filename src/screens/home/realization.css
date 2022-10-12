@@ -31,7 +31,8 @@
 
 .realization__support {
     width: 100%;
-    object-fit: contain;
+    height: 200px;
+    object-fit: cover;
     border: 1px solid #ccc;
 }
 
@@ -79,7 +80,7 @@
     }
 
     .realization__items {
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(5, 1fr);
         column-gap: 30px;
         row-gap: 40px;
         margin-top: 20px;
