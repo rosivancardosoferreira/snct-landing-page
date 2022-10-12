@@ -1,0 +1,21 @@
+.organazation_items{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.organazation_item{
+    margin-right: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid darksalmon; */
+}
+
+.organazation__name{
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 00.8rem;
+    color: var(--secondary-dark);
+    font-weight: 600;
+}

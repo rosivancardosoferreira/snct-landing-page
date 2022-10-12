@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="XVI SNCT - Itacoatiara - ICET - UFAM - IFAM, SNCT ICET" />
+    <meta name="keywords" content="XVI SNCT - Itacoatiara - ICET - UFAM - IFAM, SNCT ICET" />
     <title>XVI SNCT - Itacoatiara</title>
     <meta name="description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
     <meta name="author" content="Comissão SNCT - 2022" />
@@ -19,12 +19,12 @@
     <meta property="og:title" content="XVI SNCT - Itacoatiara" />
     <meta property="og:description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
     <meta property="og:image" content="./src/assets/logosnct2022.png" />
-     <!-- Twitter Meta Tags --> 
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="XVI SNCT - Itacoatiara" />
     <meta name="twitter:description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
     <meta name="twitter:image" content="./src/assets/logosnct2022.png" />
-	
+
     <link rel="icon" href="src/assets/favicon.png">
     <link rel="stylesheet" href="root.css">
     <link rel="stylesheet" href="normalize.css">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="src/screens/home/banner.css">
     <link rel="stylesheet" href="src/screens/home/submission.css">
     <link rel="stylesheet" href="src/screens/home/realization.css">
+    <link rel="stylesheet" href="src/screens/home/organization.css">
     <link rel="stylesheet" href="src/screens/home/hero.css">
     <link rel="stylesheet" href="src/screens/home/editions.css">
     <link rel="stylesheet" href="src/screens/home/footer.css">
@@ -45,91 +46,107 @@
             <button type="button" class="header__sandwich" onclick="onOpenMenu()">
                 <span class="header__menu" id="header-menu"></span>
             </button>
-            <img
-                src="/src/assets/logosnct2022.png"
-                alt="Logo do evento"
-                class="header__logo"
-            />
+            <img src="/src/assets/logosnct2022.png" alt="Logo do evento" class="header__logo" />
             <nav class="header__navigation" id="header-navigation">
                 <ul class="header__items" id="header-items">
                     <li class="header__logo header__logo--item">
-                        <img
-                            src="/src/assets/logosnct2022.png"
-                            alt="Logo do evento"
-                            class="header__logo"
-                        />              
+                        <img src="/src/assets/logosnct2022.png" alt="Logo do evento" class="header__logo" />
                     </li>
                     <li>
-                        <a
-                            href="#inicio"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#inicio" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Início
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#sobre"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#sobre" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Sobre
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#programacao"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#programacao" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Programação
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#edicoes-anteriores" class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0H24V24H0z"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#edicoes-anteriores" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0H24V24H0z" />
+                                <path
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Edições
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#realizacao"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76 11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#realizacao" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76 11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Realização
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#organizacao"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#organizacao" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Organização
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#contatos"
-                            class="header__link"
-                            onclick="onCloseMenu()"
-                        >
-                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 22H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2v-2H6a1 1 0 0 0 0 2h13zM5 16.17c.313-.11.65-.17 1-.17h13V4H6a1 1 0 0 0-1 1v11.17zM12 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-3 4a3 3 0 0 1 6 0H9z" fill="rgba(30,161,130,1)"/></svg>
+                        <a href="#contatos" class="header__link" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M20 22H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2v-2H6a1 1 0 0 0 0 2h13zM5 16.17c.313-.11.65-.17 1-.17h13V4H6a1 1 0 0 0-1 1v11.17zM12 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-3 4a3 3 0 0 1 6 0H9z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
                             Contatos
                         </a>
                     </li>
                     <li>
-                        <a href="#anais" class="header__link" target="_blank">Anais do Evento</a>
+                        <a href="./anais/index.html" class="header__link" target="_blank" onclick="onCloseMenu()">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M20 22H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2v-2H6a1 1 0 0 0 0 2h13zM5 16.17c.313-.11.65-.17 1-.17h13V4H6a1 1 0 0 0-1 1v11.17zM12 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-3 4a3 3 0 0 1 6 0H9z"
+                                    fill="rgba(30,161,130,1)" />
+                            </svg>
+                            Anais do Evento
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -173,8 +190,8 @@
                             Rua Nossa Senhora do Rosário, 3863 – Tiradentes Itacoatiara – Amazonas
                         </p>
                     </div>
-                    <a href="https://www.even3.com.br/xvi-snct-ita-2022/"
-                        class="button__default bannert__button" target="_blank">
+                    <a href="https://www.even3.com.br/xvi-snct-ita-2022/" class="button__default bannert__button"
+                        target="_blank">
                         INSCREVA-SE AQUI
                     </a>
                 </div>
@@ -228,27 +245,63 @@
             </p>
             <ul class="submission">
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Palestras: De 50 minutos</p>
                 </li>
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Minicursos: De 4 horas, sendo 2 horas por dia</p>
                 </li>
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Oficinas: De 4 horas, sendo 2 horas por dia</p>
                 </li>
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Trabalhos de Conclusão de Curso: De 20 minutos</p>
                 </li>
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Projetos de Iniciação Científica: De 20 minutos</p>
                 </li>
                 <li class="submission__item">
-                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg class="submission__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <p class="submission__text">Projetos de Extensão: De 20 minutos</p>
                 </li>
             </ul>
@@ -292,41 +345,66 @@
                 <hr class="title__line" />
             </div>
             <p class="simple__text">
-                O Comitê Científico da XVI SCNT-ITA 2021 convida a comunidade para a submissão de trabalhos em duas
+                O Comitê Científico da XVI SCNT-ITA 2022 convida a comunidade para a submissão de trabalhos em duas
                 categorias: Resumo e Artigo. Para obter instruções de submissão de cada categoria,
                 <a href="/anais/index.html" class="link__text">Clique Aqui.</a>
             </p>
             <ul class="dates__items">
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <div>
                         <p class="dates__text">Período de Submissão (Autores)</p>
                         <p class="dates__info">22/09/2022 até 16/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <div>
                         <p class="dates__text">Avaliação dos Trabalhos(Comitê)</p>
                         <p class="dates__info">17/10/2022 até 19/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <div>
                         <p class="dates__text">Período para Correção e Submissão da Versão Final (Autores)</p>
                         <p class="dates__info">20/10/2022 até 22/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <div>
                         <p class="dates__text">Revisão Final (Comitê)</p>
                         <p class="dates__info">23/10/2022 até 24/10/2022</p>
                     </div>
                 </li>
                 <li class="dates__item box__shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z" fill="rgba(241,177,74,1)"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M8.586 17H3v-2h18v2h-5.586l3.243 3.243-1.414 1.414L13 17.414V20h-2v-2.586l-4.243 4.243-1.414-1.414L8.586 17zM5 3h14a1 1 0 0 1 1 1v10H4V4a1 1 0 0 1 1-1zm1 2v7h12V5H6z"
+                            fill="rgba(241,177,74,1)" />
+                    </svg>
                     <div>
                         <p class="dates__text">Divulgação do Resultado Final</p>
                         <p class="dates__info">24/10/2021</p>
@@ -334,7 +412,8 @@
                 </li>
             </ul>
             <div class="dates__button">
-                <a href="https://www.even3.com.br/xvi-snct-ita-2022/" target="_blank" class="button__default submission__button" >
+                <a href="https://www.even3.com.br/xvi-snct-ita-2022/" target="_blank"
+                    class="button__default submission__button">
                     SUBMISSÃO DE RESUMO/ARTIGO AQUI
                 </a>
             </div>
@@ -350,7 +429,7 @@
             <!-- <p class="simple__text">A inscrição no evento dá direito a você de participar das seguintes atividades:
                 Palestras, Minicurso, Apresentações dos Artigos e Resumos. Para se inscrever nas atividades do evento
                 clique no link abaixo:</p> -->
-                
+
         </section>
         <span id="realizacao"></span>
         <section class="realization safe__area section--top">
@@ -451,7 +530,8 @@
                     <hr class="title__line title__line--invert" />
                 </div>
                 <nav class="editions__items">
-                    <a href="https://eventmaster.com.br/event/snct2015/site/content/xii-semana-nacional-de-ciencia-e-tecnologia-de-itacoatiara" target="_blank" class="editions__item">
+                    <a href="https://eventmaster.com.br/event/snct2015/site/content/xii-semana-nacional-de-ciencia-e-tecnologia-de-itacoatiara"
+                        target="_blank" class="editions__item">
                         <img src="/src/assets/snct-2015.png" alt="Logo evento do ano de" class="editions__image" />
                     </a>
                     <a href="https://sncticet.ufam.edu.br/2016/" target="_blank" class="editions__item">
@@ -476,45 +556,85 @@
             </div>
         </section>
         <span id="organizacao"></span>
-        <section class="about safe__area section--top">
+        <section class="organization safe__area section--top">
             <div class="title__contant">
                 <hr class="title__line" />
                 <h2 class="title__text">Organização</h2>
                 <hr class="title__line" />
             </div>
-            <p class="simple__text">
-                Realizada nacionalmente desde 2004, a Semana Nacional de Ciência e Tecnologia (SNCT) é um evento
-                coordenado pelo Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC) e conta com a
-                colaboração de secretarias estaduais e municipais, agências de fomento, espaços científico-culturais,
-                instituições de ensino e pesquisa, sociedades científicas, escolas, órgãos governamentais, empresas de
-                base tecnológica e entidades da sociedade civil de todo o País.
-                <br /><br />
-                A nível regional, a SNCT de Itacoatiara (SNCT-ITA) é realizada há 13 anos, desde 2007 quando o ICET foi
-                inaugurado, sempre acompanhando as temáticas centrais que são propostas pelo MCTIC. É um evento
-                totalmente gratuito à participação de todos e comumente presencial realizada no mês de Outubro, seguindo
-                a data nacional. Nesse ano de 2022, a XVI Semana Nacional de Ciência e Tecnologia de Itacoatiara,
-                (SNCT-ITA 2022), será realizada em formato formato hibrído, no período de 24 a 27 de Outubro de 2022.
-                Este ano também teremos a submissão de trabalho em duas categorias de trabalhos científicos: Resumos e
-                Artigos.
-                <br /><br />
-                Em homenagem aos 200 anos da Declaração da Independência do Brasil, em 7 de setembro de 1822, o tema do
-                evento será “Bicentenário da Independência: 200 anos de ciência, tecnologia e inovação no Brasil” Nesse
-                sentido, espera-se tornar possível a democratização de discussões que impulsionem pesquisas locais e de
-                desenvolvimento de ações que possam contribuir para o desenvolvimento e qualidade de vida da comunidade
-                itacoatiarense em geral e de municípios adjacentes.
-                <br /><br />
-                A programação hibrida poderá tornar possível maior participação do publico nas atividades de pesquisa
-                desenvolvidas pelos docentes e discentes das instituições de ensino e pesquisa da região, além de
-                proporcionar encontros virtuais e presenciais e profissionais locais e conferencistas de outras regiões
-                do país. O evento é aberto a todo o público interessado em Ciência e Tecnologia, principalmente a
-                participação de acadêmicos do Ensino Superior e do Ensino Fundamental e Médio, sejam de instituições
-                públicas ou privadas, assim como para a população em geral.
-                <br /><br />
-            </p>
+            <div class="organazation_items">
+                <div class="organazation_item">
+                    <p class="organazation__name">Subcomissão de Comitê Científico da XVI SNCT 2022</p>
+                    <p>JOEL CASTRO DO NASCIMENTO</p>
+                    <p>ARIANE BATISTA MAQUINÉ</p>
+                    <p>FLAVIO NOGUEIRA DA COSTA</p>
+                    <p>ELIANE BATISTA DE LIMA FREITAS</p>
+                    <p>VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p>JOÃO RAIMUNDO SILVA FERREIRA</p>
+                    <p>MARCO AURÉLIO DOS SANTOS CRUZ</p>
+                    <p class="organazation__name">Subcomissão de Visitação de Laboratórios da XVI SNCT 2022</p>
+                    <p>MARGARIDA CARMO DE SOUZA</p>
+                    <p>ANA PAULA FACCIO</p>
+                    <p>WELMA SOUSA SILVA CARNEIRO</p>
+                    <p>LÚCIO FÁBIO PEREIRA DA SILVA</p>
+                    <p>RAINER XAVIER DE AMORIM</p>
+                    <p>FLAVIO NOGUEIRA DA COSTA</p>
+                    <p>VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p>ARIANE BATISTA MAQUINÉ</p>
+                    <p>ELIANE BATISTA DE LIMA FREITAS</p>
+                    <p>FERNANDO FULGÊNCIO LEÓN ÁVILA</p>
+                    <p>FELIPE GOMES DE OLIVEIRA</p>
+                </div>
+                <div class="organazation_item">
+                    <p class="organazation__name">Subcomissão de T.I da XVI SNCT 2022</p>
+                    <p>RUTE HOLANDA LOPES</p>
+                    <p>ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p>ROSIVAN CARDOSO</p>
+                    <p>JOSIAS BRAGA PENA</p>
+                    <p>JOÃO MATHEUS PENA</p>
+                    <p>JOÃO MATHEUS BARRETO </p>
+                    <p>JUSCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__name">Submissão de Programação da XVI SNCT 2022</p>
+                    <p>ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p>RUTE HOLANDA LOPES</p>
+                    <p>JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p>ROSIVAN CARDOSO</p>
+                    <p>JOSIAS BRAGA PENA</p>
+                    <p>JOÃO MATHEUS BARRETO</p>
+                    <p>JUCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__name">Subcomissão de Atividades Culturais</p>
+                    <p>HELENO TRINDADE DE SOUZA</p>
+                    <p>SILVINA PAOLA GÓMEZ MARTÍNEZ</p>
+                    <p>OCIMAR MARQUES DA SILVA NETO</p>
+                </div>
+                <div class="organazation_item">
+                    <p class="organazation__name">Subcomissão de Interiorização da XVI SNCT 2022</p>
+                    <p>FABRICIO VALENTIM DA SILVA</p>
+                    <p>ISABEL REIS GUESDON</p>
+                    <p>ERICO LUIS HOSHIBA TAKAHASHI</p>
+                    <p class="organazation__name">Subcomissão de Voluntariados da XVI SNCT 2022</p>
+                    <p>FLAVIO NOGUEIRA DA COSTA</p>
+                    <p>VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p>ROSIVAN CARDOSO</p>
+                    <p>JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p class="organazation__name">Subcomissão de Secretaria do Evento e Credenciamento da XVI SNCT 2022</p>
+                    <p>ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p>JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p>ROSIVAN CARDOSO</p>
+                    <p>JOÃO MATHEUS BARRETO</p>
+                    <p>JUCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__name">Subcomissão de Logística da XVI SNCT 2022</p>
+                    <p>MARIA ELIANE BARBOSA LACERDA</p>
+                    <p>HELEN CARMEM FERREIRA REBOUÇAS</p>
+                </div>
+            </div>
         </section>
     </main>
     <span id="contatos"></span>
     <footer class="footer section--top">
+        <!-- <div class="title__contant">
+            <h2 class="title__text">Fale Conosco</h2>
+        </div> -->
         <div class="safe__area">
             <div class="footer_items">
                 <a href="https://www.facebook.com/snctita.oficial/" target="_blank" class="footer_item">
@@ -530,7 +650,8 @@
                     <img src="src/assets/email.png" alt="Email">
                 </a>
             </div>
-            <span class="simple__text"> Copyright @ 2022 Desenvolvido pelos Discentes Alex da Silva e Rosivan Cardoso do Curso de Sistemas de Informação do ICET/UFAM</span>
+            <span class="simple__text"> Copyright @ 2022 XVI Semana Nacional de Ciência e Tecnologia. Desenvolvido pelos
+                Discentes Alex da Silva e Rosivan Cardoso do Curso de Sistemas de Informação do ICET/UFAM</span>
         </div>
     </footer>
 </body>
