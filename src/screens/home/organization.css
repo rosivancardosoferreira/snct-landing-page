@@ -5,17 +5,24 @@
 }
 
 .organazation_item{
-    margin-right: 0.8rem;
+    margin-right: 6px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* border: 1px solid darksalmon; */
 }
 
-.organazation__name{
-    text-align: center;
+.organazation__title{
+    /* text-align: center; */
     margin-top: 0.8rem;
-    margin-bottom: 00.8rem;
+    margin-bottom: 0.8rem;
     color: var(--secondary-dark);
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.organazation__name{
+    /* text-align: justify; */
+    font-size: 14px;
+    margin-bottom: 6px;
+    /* border: 1px solid darksalmon; */
 }
