@@ -25,3 +25,11 @@ const fields = {
         fields.headerItems.classList.remove("header__items--open");
     }
  }
+
+ async function onRequestSchedule() {
+   alert("request")
+ }
+
+ window.onload = () => {
+   onRequestSchedule();
+ };
