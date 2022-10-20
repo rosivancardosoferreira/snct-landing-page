@@ -1,0 +1,43 @@
+.schedule__items {
+    border: 1px solid red;
+}
+
+.schedule-items {
+    display: none;
+}
+
+.schedule-items__date {
+    border-radius: 10px;
+    background-color: var(--primary-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule-items__image {
+    width: 130px;
+    height: 140px;
+    object-fit: fill;
+    border-radius: 10px 0 0 10px
+}
+
+.schedule-items__numbers {
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.schedule-items__day {
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.schedule-items__month {
+    font-size: 1rem;
+    color: var(--primary-dark);
+}
+
+.schedule-items__name {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
