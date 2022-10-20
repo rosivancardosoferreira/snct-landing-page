@@ -144,7 +144,8 @@
     position: relative;
     width: 80px;
     height: 80px;
-  }
+}
+
 .lds-ring div {
     box-sizing: border-box;
     display: block;
@@ -173,4 +174,17 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+@media screen and (max-width: 767px) {
+    .schedule-items .box__shadow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule-item__infos {
+        width: 100%;
+    }
+
 }
