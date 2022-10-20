@@ -30,6 +30,7 @@ h5,
 p,
 strong,
 span,
-a {
+a,
+label {
     font-family: 'Inter', sans-serif;
 }

@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="src/screens/home/realization.css">
     <link rel="stylesheet" href="src/screens/home/organization.css">
     <link rel="stylesheet" href="src/screens/home/hero.css">
+    <link rel="stylesheet" href="src/screens/home/schedule.css">
     <link rel="stylesheet" href="src/screens/home/editions.css">
     <link rel="stylesheet" href="src/screens/home/footer.css">
     <link rel="stylesheet" href="style.css">
@@ -426,11 +427,17 @@
                 <h2 class="title__text">Programação</h2>
                 <hr class="title__line" />
             </div>
-            <p class="simple__text realization__title">EM BREVE</p>
+            <div class="schedule-loading" id="schedule-loading">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                <h2 class="schedule-loading__title">Carregando dados</h2>
+            </div>
+            <div
+                class="schedule-items schedule-items--hidden"
+                id="schedule-items"
+            ></div>
             <!-- <p class="simple__text">A inscrição no evento dá direito a você de participar das seguintes atividades:
                 Palestras, Minicurso, Apresentações dos Artigos e Resumos. Para se inscrever nas atividades do evento
                 clique no link abaixo:</p> -->
-
         </section>
         <span id="realizacao"></span>
         <section class="realization safe__area section--top">
@@ -657,5 +664,4 @@
     </footer>
 </body>
 <script src="src/screens/home/script.js"></script>
-
 </html>

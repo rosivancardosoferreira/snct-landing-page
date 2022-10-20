@@ -20,7 +20,7 @@
 
 .hero__number {
     font-size: 5rem;
-    letter-spacing: 1.px;
+    letter-spacing: 1px;
     color: var(--primary-white);
     font-weight: 700;
 }

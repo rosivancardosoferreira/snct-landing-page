@@ -3,6 +3,8 @@ const fields = {
     headerNavigation: document.getElementById("header-navigation"),
     headerMenu: document.getElementById("header-menu"),
     headerItems: document.getElementById("header-items"),
+    contentSchedule: document.getElementById("schedule-items"),
+    loadingSchedule: document.getElementById("schedule-loading"),
 }
  window.addEventListener("scroll", () => {
     const currentPositionScroll = window.pageYOffset;
@@ -26,10 +28,127 @@ const fields = {
     }
  }
 
+ function renderProfilePhoto(speakers) {
+   return speakers?.slice(0,1)?.map(({name, photo}) => {
+      const profilePhoto = photo ?? "src/assets/without.jpg"
+      return  `
+            <img
+               class="schedule-item__photo"
+               src="${profilePhoto}"
+               alt="foto de perfil de ${name}"
+            />
+            <p class="schedule-item__name">${name}</p>
+         `
+      }
+   ) 
+   
+ }
+
+ function renderDetailsDate(all_dates) {
+   return all_dates?.map(({date, start_time, end_time}) => (
+      `
+         ${date?.substring(8,10)}/10 de ${start_time} às ${end_time} <br>
+      `
+   )).join("") 
+ }
+
+ function renderSpeakers(speakers) {
+   const title = speakers?.length > 1 ? 'Palestrantes' : 'Palestrante';
+   return `
+      <div class="schedule-item__double">
+            <label class="schedule-item__indicator">${title}</label>
+            <p class="schedule-item__text">
+            ${speakers?.map(({name}) => (
+               `
+                  ${name} <br>
+               `
+            )).join("")}
+            </p>
+      </div>
+   `
+ }
+
+ function renderSessions(sessions) {
+   return sessions?.map(({title, description, venue, speakers, all_dates}) => (
+      `
+      <div class="schedule-item box__shadow">
+             <div class="schedule-item__profile">
+             ${renderProfilePhoto(speakers)}               
+             </div>
+             <div class="schedule-item__infos">
+                 <div>
+                     <label class="schedule-item__indicator">Título</label>
+                     <h3 class="schedule-item__title">${title}</h3>
+                 </div>
+                 <div>
+                     <label class="schedule-item__indicator">Descrição</label>
+                     <p class="schedule-item__text">
+                         ${description}
+                     </p>
+                 </div>
+                 <div>
+                     <label class="schedule-item__indicator">Local</label>
+                     <p class="schedule-item__text">
+                         ${venue}
+                     </p>
+                 </div>
+                 <div class="schedule-item__tow">
+                     ${renderSpeakers(speakers)}
+                     <div class="schedule-item__double">
+                         <label class="schedule-item__indicator">Detalhes da data</label>
+                         <p class="schedule-item__text">
+                           ${renderDetailsDate(all_dates)}
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+      `
+     )).join("")
+ }
+
+ function renderItemsSchedule(data) {
+   console.log(JSON.stringify(data, null, 2));
+   fields.contentSchedule.innerHTML = data?.map(({ date, day, sessions }) => (
+      `
+         <div class="schedule-items__date box__shadow">
+            <img
+               src="src/assets/diary.jpg"
+               alt="depois vejo" 
+               class="schedule-items__image"
+            >
+            <div class="schedule-items__numbers">
+               <p class="schedule-items__day">${date.substring(8,10)}</p>
+               <p class="schedule-items__month"><strong>Outubro'</strong> 2022</p>
+               <p class="schedule-items__name">${day.charAt(0).toUpperCase() + day.slice(1)}</p>
+            </div>
+         </div>
+         ${renderSessions(sessions)}
+      `
+   )).join("")
+ }
+
  async function onRequestSchedule() {
-   alert("request")
+   try {
+      const response = await fetch("https://www.even3.com.br/api/v1/session/getschedule", {
+         method: 'GET',
+         headers: {
+            "Content-Type": "application/json",
+            "Authorization-Token": "6c58b1f0-0135-440b-9b9c-9a24d85a63e7"
+         }
+      });
+      const data = await response.json();
+      renderItemsSchedule(data.data);
+   } catch(e) {
+      console.error(e);
+   } finally  {
+      fields.loadingSchedule.classList.add("schedule-loading--hidden")
+      fields.contentSchedule.classList.remove("schedule-items--hidden")
+   }
  }
 
  window.onload = () => {
    onRequestSchedule();
  };
+
+ 
