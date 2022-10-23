@@ -108,7 +108,6 @@ const fields = {
  }
 
  function renderItemsSchedule(data) {
-   console.log(JSON.stringify(data, null, 2));
    fields.contentSchedule.innerHTML = data?.map(({ date, day, sessions }) => (
       `
          <div class="schedule-items__date box__shadow">
@@ -128,23 +127,10 @@ const fields = {
    )).join("")
  }
 
- async function onRequestSchedule() {
-   try {
-      const response = await fetch("https://www.even3.com.br/api/v1/session/getschedule", {
-         method: 'GET',
-         headers: {
-            "Content-Type": "application/json",
-            "Authorization-Token": "6c58b1f0-0135-440b-9b9c-9a24d85a63e7"
-         }
-      });
-      const data = await response.json();
-      renderItemsSchedule(data.data);
-   } catch(e) {
-      console.error(e);
-   } finally  {
-      fields.loadingSchedule.classList.add("schedule-loading--hidden")
-      fields.contentSchedule.classList.remove("schedule-items--hidden")
-   }
+ function onRequestSchedule() {
+   renderItemsSchedule(datas);
+   fields.loadingSchedule.classList.add("schedule-loading--hidden")
+   fields.contentSchedule.classList.remove("schedule-items--hidden")
  }
 
  window.onload = () => {
