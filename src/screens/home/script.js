@@ -95,7 +95,7 @@ const fields = {
                  <div class="schedule-item__tow">
                      ${renderSpeakers(speakers)}
                      <div class="schedule-item__double">
-                         <label class="schedule-item__indicator">Detalhes da data</label>
+                         <label class="schedule-item__indicator">Programação detalhada</label>
                          <p class="schedule-item__text">
                            ${renderDetailsDate(all_dates)}
                          </p>
