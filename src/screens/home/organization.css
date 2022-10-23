@@ -26,3 +26,9 @@
     margin-bottom: 6px;
     /* border: 1px solid darksalmon; */
 }
+
+@media screen and (max-width: 767px) {
+    .organazation_items {
+        flex-direction: column;
+    }
+}
