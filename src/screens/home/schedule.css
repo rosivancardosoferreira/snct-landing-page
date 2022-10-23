@@ -31,7 +31,7 @@
 
 .schedule-items__numbers {
     padding: 10px 20px;
-    text-align: right;
+    text-align: right;    
 }
 
 .schedule-items__day {
@@ -178,12 +178,24 @@
 
 
 @media screen and (max-width: 767px) {
-    .schedule-items .box__shadow {
+    .schedule-item {
         flex-direction: column;
         align-items: center;
     }
 
+    .schedule-items__image {
+        width: 130px;
+        object-fit: cover;
+    }
+
     .schedule-item__infos {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .schedule-item__tow {
+        flex-direction: column;
+        row-gap: 18px;
         width: 100%;
     }
 
