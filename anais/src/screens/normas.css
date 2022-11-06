@@ -1,0 +1,46 @@
+.normas {
+    text-align: justify;
+}
+
+.normas_line{
+    list-style-type: disc;
+}
+
+.normas__date{
+    list-style-type: disc;
+    display: flex;
+}
+
+.normas__title {
+    color: var(--primary-black);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: .8rem;
+}
+
+.normas__text {
+    color: var(--primary-black);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    margin-left: 2.3rem;
+}
+
+.normas_btn_anais{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.normas_btn_down{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+    margin-top: .8rem;
+}
+
+@media screen and (max-width: 767px) {
+    .normas__date {
+        flex-direction: column;
+    }
+}

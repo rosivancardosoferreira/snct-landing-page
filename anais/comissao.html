@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="XVI SNCT - Itacoatiara - ICET - UFAM - IFAM, SNCT ICET" />
+    <title>XVI SNCT - ANAIS</title>
+    <meta name="description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
+    <meta name="author" content="Comissão SNCT - 2022" />
+    <!--  GOOGLE  -->
+    <meta itemprop="name" content="XVI SNCT - Itacoatiara" />
+    <meta itemprop="description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
+    <meta itemprop="image" content="../src/assets/logosnct2022.png" />
+    <!--  FACEBOOK  -->
+    <meta property="og:url" content="https://sncticet.ufam.edu.br/anais" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="XVI SNCT - ANAIS" />
+    <meta property="og:description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
+    <meta property="og:image" content="../src/assets/logosnct2022.png" />
+    <!-- Twitter Meta Tags --> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="XVI SNCT - Itacoatiara" />
+    <meta name="twitter:description" content="Semana Nacional de Ciência e Tecnologia de Itacoatiara/AM" />
+    <meta name="twitter:image" content="../src/assets/logosnct2022.png" />
+	
+    <link rel="icon" href="../src/assets/favicon.png">
+    <link rel="stylesheet" href="../root.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="src/screens/header.css">
+    <link rel="stylesheet" href="../anais/src/screens/banner.css">
+    <link rel="stylesheet" href="../anais/src/screens/normas.css">
+    <link rel="stylesheet" href="../src/screens/home/submission.css">   
+    <link rel="stylesheet" href="../src/screens/home/realization.css">
+    <link rel="stylesheet" href="../src/screens/home/organization.css">
+    <link rel="stylesheet" href="../src/screens/home/hero.css">
+    <link rel="stylesheet" href="../src/screens/home/editions.css">
+    <link rel="stylesheet" href="../anais/src/screens/footer.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="header box__shadow" id="header">
+        <div class="header__content safe__area">
+            <button type="button" class="header__sandwich" onclick="onOpenMenu()">
+                <span class="header__menu" id="header-menu"></span>
+            </button>
+            <img
+                src="../src/assets/logosnct2022.png"
+                alt="Logo do evento"
+                class="header__logo"
+            />
+            <nav class="header__navigation" id="header-navigation">
+                <ul class="header__items" id="header-items">
+                    <li class="header__logo header__logo--item">
+                        <img
+                            src="../src/assets/logosnct2022.png"
+                            alt="Logo do evento"
+                            class="header__logo"
+                        />              
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z" fill="rgba(30,161,130,1)"/></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="apresentacao.html"
+                            class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z" fill="rgba(30,161,130,1)"/></svg>
+                            Apresentação
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="comissao.html" class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 11a5 5 0 0 1 5 5v6h-2v-6a3 3 0 0 0-2.824-2.995L12 13a3 3 0 0 0-2.995 2.824L9 16v6H7v-6a5 5 0 0 1 5-5zm-6.5 3c.279 0 .55.033.81.094a5.947 5.947 0 0 0-.301 1.575L6 16v.086a1.492 1.492 0 0 0-.356-.08L5.5 16a1.5 1.5 0 0 0-1.493 1.356L4 17.5V22H2v-4.5A3.5 3.5 0 0 1 5.5 14zm13 0a3.5 3.5 0 0 1 3.5 3.5V22h-2v-4.5a1.5 1.5 0 0 0-1.356-1.493L18.5 16c-.175 0-.343.03-.5.085V16c0-.666-.108-1.306-.309-1.904.259-.063.53-.096.809-.096zm-13-6a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm13 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm-13 2a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm13 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zM12 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="rgba(30,161,130,1)"/></svg>
+                            Comissão
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="corpo.html" class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z" fill="rgba(30,161,130,1)"/></svg>
+                            Corpo Editorial
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="normas.html" class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path d="M20 2c.552 0 1 .448 1 1v3.757l-2 2V4H5v16h14v-2.758l2-2V21c0 .552-.448 1-1 1H4c-.552 0-1-.448-1-1V3c0-.552.448-1 1-1h16zm1.778 6.808l1.414 1.414L15.414 18l-1.416-.002.002-1.412 7.778-7.778zM13 12v2H8v-2h5zm3-4v2H8V8h8z" fill="rgba(30,161,130,1)"/></svg>
+                            Normas para publicação
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="artigos.html" class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM7 6h4v4H7V6zm0 6h10v2H7v-2zm0 4h10v2H7v-2zm6-9h4v2h-4V7z" fill="rgba(30,161,130,1)"/></svg>
+                            Artigos
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="resumos.html" class="header__link"
+                            onclick="onCloseMenu()"
+                        >
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 8v12.993A1 1 0 0 1 20.007 22H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8zm-2 1h-5V4H5v16h14V9zM8 7h3v2H8V7zm0 4h8v2H8v-2zm0 4h8v2H8v-2z" fill="rgba(30,161,130,1)"></svg>
+                            Resumos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="banner effect__parallax" id="inicio">
+            <div class="banner__safe">
+                <div class="banner__texts">
+                    <h1 class="banner__title">
+                        ANAIS DA SEMANA NACIONAL <br> DE CIÊNCIA E TECNOLOGIA ICET/UFAM e IFAM <br> ISSN 2594-8237
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <span id="apresentacao"></span>
+        <section class="organization safe__area section--top">
+            <div class="title__contant">
+                <hr class="title__line" />
+                <h2 class="title__text">Comissão</h2>
+                <hr class="title__line" />
+            </div>
+            <div class="organazation_items">
+                <div class="organazation_item">
+                    <p class="organazation__title">Subcomissão de Comitê Científico da XVI SNCT 2022</p>
+                    <p class="organazation__name">JOEL CASTRO DO NASCIMENTO</p>
+                    <p class="organazation__name">ARIANE BATISTA MAQUINÉ</p>
+                    <p class="organazation__name">FLAVIO NOGUEIRA DA COSTA</p>
+                    <p class="organazation__name">ELIANE BATISTA DE LIMA FREITAS</p>
+                    <p class="organazation__name">VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p class="organazation__name">JOÃO RAIMUNDO SILVA FERREIRA</p>
+                    <p class="organazation__name">MARCO AURÉLIO DOS SANTOS CRUZ</p>
+                    <p class="organazation__title">Subcomissão de Visitação de Laboratórios da XVI SNCT 2022</p>
+                    <p class="organazation__name">MARGARIDA CARMO DE SOUZA</p>
+                    <p class="organazation__name">ANA PAULA FACCIO</p>
+                    <p class="organazation__name">WELMA SOUSA SILVA CARNEIRO</p>
+                    <p class="organazation__name">LÚCIO FÁBIO PEREIRA DA SILVA</p>
+                    <p class="organazation__name">RAINER XAVIER DE AMORIM</p>
+                    <p class="organazation__name">FLAVIO NOGUEIRA DA COSTA</p>
+                    <p class="organazation__name">VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p class="organazation__name">ARIANE BATISTA MAQUINÉ</p>
+                    <p class="organazation__name">ELIANE BATISTA DE LIMA FREITAS</p>
+                    <p class="organazation__name">FERNANDO FULGÊNCIO LEÓN ÁVILA</p>
+                    <p class="organazation__name">FELIPE GOMES DE OLIVEIRA</p>
+                </div>
+                <div class="organazation_item">
+                    <p class="organazation__title">Subcomissão de T.I da XVI SNCT 2022</p>
+                    <p class="organazation__name">RUTE HOLANDA LOPES</p>
+                    <p class="organazation__name">ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p class="organazation__name">ROSIVAN CARDOSO</p>
+                    <p class="organazation__name">JOSIAS BRAGA PENA</p>
+                    <p class="organazation__name">JOÃO MATHEUS PENA</p>
+                    <p class="organazation__name">JOÃO MATHEUS BARRETO </p>
+                    <p class="organazation__name">JUSCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__title">Submissão de Programação da XVI SNCT 2022</p>
+                    <p class="organazation__name">ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p class="organazation__name">RUTE HOLANDA LOPES</p>
+                    <p class="organazation__name">JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p class="organazation__name">ROSIVAN CARDOSO</p>
+                    <p class="organazation__name">JOSIAS BRAGA PENA</p>
+                    <p class="organazation__name">JOÃO MATHEUS BARRETO</p>
+                    <p class="organazation__name">JUCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__title">Subcomissão de Atividades Culturais</p>
+                    <p class="organazation__name">HELENO TRINDADE DE SOUZA</p>
+                    <p class="organazation__name">SILVINA PAOLA GÓMEZ MARTÍNEZ</p>
+                    <p class="organazation__name">OCIMAR MARQUES DA SILVA NETO</p>
+                </div>
+                <div class="organazation_item">
+                    <p class="organazation__title">Subcomissão de Interiorização da XVI SNCT 2022</p>
+                    <p class="organazation__name">FABRICIO VALENTIM DA SILVA</p>
+                    <p class="organazation__name">ISABEL REIS GUESDON</p>
+                    <p class="organazation__name">ERICO LUIS HOSHIBA TAKAHASHI</p>
+                    <p class="organazation__title">Subcomissão de Voluntariados da XVI SNCT 2022</p>
+                    <p class="organazation__name">FLAVIO NOGUEIRA DA COSTA</p>
+                    <p class="organazation__name">VICTOR CELSO CAVALCANTI CAPIBARIBE</p>
+                    <p class="organazation__name">ROSIVAN CARDOSO</p>
+                    <p class="organazation__name">JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p class="organazation__title">Subcomissão de Secretaria do Evento e Credenciamento da XVI SNCT 2022</p>
+                    <p class="organazation__name">ELIZÂNGELA DE JESUS OLIVEIRA</p>
+                    <p class="organazation__name">JOSILENE VITÓRIA DOS SANTOS</p>
+                    <p class="organazation__name">ROSIVAN CARDOSO</p>
+                    <p class="organazation__name">JOÃO MATHEUS BARRETO</p>
+                    <p class="organazation__name">JUCELINO DE MACIEL MENEZES</p>
+                    <p class="organazation__title">Subcomissão de Logística da XVI SNCT 2022</p>
+                    <p class="organazation__name">MARIA ELIANE BARBOSA LACERDA</p>
+                    <p class="organazation__name">HELEN CARMEM FERREIRA REBOUÇAS</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <span id="contatos"></span>
+    <footer class="footer section--top">
+        <div class="safe__area">
+            <div class="footer_items">
+                <div>
+                    <h2 class="footer_title">Endereço</h2>
+                    <p class="footer_text">Av. Nossa Senhora do Rosário, 3863</p>
+                    <p class="footer_text">Bairro: Tiradentes</p>
+                    <p class="footer_text">CEP: 69103-128</p>
+                    <p class="footer_text">Itacoatiara/AM</p>
+                </div>
+                <div>
+                    <h2 class="footer_title">Organização</h2>
+                    <img src="../src/assets/icet-logo.png" alt="">
+                    <img src="../src/assets/ufam-logo.png" alt="">
+                    <img src="../src/assets/ifam-logo.png" alt="">
+                </div>
+                <div>
+                    <h2 class="footer_title">Contato</h2>
+                    <p class="footer_text">Email: sncticet@ufam.edu.br</p>
+                </div>
+            </div>
+            <span class="simple__text"> Copyright @ 2022 XVI Semana Nacional de Ciência e Tecnologia. Desenvolvido por ICET/UFAM.</span> 
+        </div>
+    </footer>
+</body>
+<script src="../src/screens/home/script.js"></script>
+
+</html>

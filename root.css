@@ -7,9 +7,11 @@
     --primary-dark: #111111;
     --secondary-dark: #1F1F1F;
     --green: #1EA182;
+    /* --green--light: #cbcbcb; */
     --green--light: #41AF98;
     --primary-white: #FFFFFF;
     --secondary-white: #F8F8F8;
+    --thirty-white: #bcbbbb6b;
     /* size fonts */
     --normal: 1.1rem;
 }

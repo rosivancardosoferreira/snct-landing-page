@@ -19,6 +19,7 @@
     line-height: 1.7rem;
     color: var(--green);
     font-weight: 600;
+    margin-right: .3rem;
 }
 
 .dates__info {

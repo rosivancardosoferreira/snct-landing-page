@@ -1,0 +1,25 @@
+.article {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.article_info{
+    margin-left: .5rem;
+}
+
+.article_down{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+    .article {
+        text-align: justify;
+    }
+    .article_down {
+        margin-left: 1rem;
+    }
+}
